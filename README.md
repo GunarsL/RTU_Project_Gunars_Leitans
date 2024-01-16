@@ -15,16 +15,17 @@ Projekta nosacījumi iekļauj sevī veidot programmu izmantojot Python programm�
 Projekta izstrādē tika izmantotas vairāks Python bibliotēkas:
 
 - Selenium
-- BeautifulSoup
-- openpyxl
+- Pandas ar iebūvēto openpyxl atbalstu
 - Tkinter
+- datetime
+- os
 
 Projekta izstrādei tiek izmantotas sekojošās bibliotēkas, lai spētu izmantot Python valodas priekšrocības automatizēt lietotāja darba vakanču meklēšanu.
 
-Selenium bibliotēka tiek izmantota, lai iegūtu un izgūtu nepieciešamo informāciju no lietotāja un ievietot, atrast prasīto mājaslapā.
+Selenium bibliotēka tiek izmantota, lai izgūtu un vēlāk apstrādātu iegūto informāciju no mājaslapas.
 
-BeautifulSoup bibliotēka tiek izmantota, lai izgūtu HTML valodas elementus un saglabātu tos priekš izvades.
+Pandas bibliotēka ar openpyxl iebūvēto atbalstu nodrošina iespēju saglabāt izgūtu informāciju no mājaslapas excel(.xlsx) formātā.
 
-Openpyxl bibliotēka tiek izmantota, lai izveidotu excel datni, kurā tiek saglabāta informācija ar visām atrastajā darba vakancēm, kas atbilst lietotāja prasībām, lai vēlāk to apskatītu.
+Tkinter bibliotēka ir lietotāja interfeiss(GUI), kas sniedz ērtāku lietotāja saskarni un patīkamāku programmas izmantošanas procesu.
 
-Tkinter bibliotēka tiek izmantota kā grafiskā vide priekš lietotāja saskarnes, lai nebūtu jāizmanto terminālis, kas nav piemērotākais un draudzīgākais veids.
+Datetime un OS bibliotēkas ir sistēmas bibliotēkas. Datetime bibliotēka nolasa laiku, kurā tiek veiktas kādas darbības. OS bibliotēka ļauj atrast sistēmā nepieciešamos failus, ja tādi pastāv.
