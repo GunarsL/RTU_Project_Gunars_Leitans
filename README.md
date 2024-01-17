@@ -56,18 +56,22 @@ Kad šis tiek veikts, programmas darbību veikšanai jānorit veiksmīgi. Progra
 
 **Lietotāja vides saskarnes logs:**
 
+![GUI photo](https://github.com/GunarsL/RTU_Project_Gunars_Leitans/assets/70687877/00875953-d2cf-4a33-9c0e-1cf47fbd3b7d)
 
 
 **Lietotāja vides saskarnes logs ar informāciju:**
 
+![GUI_with_info1](https://github.com/GunarsL/RTU_Project_Gunars_Leitans/assets/70687877/84795be7-eccf-4957-b602-2f83304e219d)
 
 
 **Lietotāja ievadītā informācijas pielietojums:**
 
+![user_info_used](https://github.com/GunarsL/RTU_Project_Gunars_Leitans/assets/70687877/c451a1c6-0f57-47f2-8299-f21877ae103f)
 
 
 **Saglabātais fails ar rezultātu:**
 
+![excel_file](https://github.com/GunarsL/RTU_Project_Gunars_Leitans/assets/70687877/0e66e924-1add-4ea3-ae9a-e8ecc0b81916)
 
 
 Izmantojot šo programmu var arī novērot, ka nevienmēr excel faila informācijas formāts būs vienāds, jo dažreiz vakances nesatur informāciju par, piemēram, atalgojumu vai termiņa beigām.
