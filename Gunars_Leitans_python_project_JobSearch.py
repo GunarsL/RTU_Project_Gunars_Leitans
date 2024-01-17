@@ -33,26 +33,26 @@ def get_user_input():
         root.destroy()
 
     # tiek definēti lietotāja ievades lauki ar paskaidrojumiem, kā arī neliela stila izmaiņa
-    file_name_label = tk.Label(font=("Roboto", 10, "bold"), text="Ievadiet vēlamo excel(.xlsx) faila nosaukumu:")
+    file_name_label = tk.Label(font=("Roboto", 10, "bold"), text="Ievadiet excel(.xlsx) faila nosaukumu:")
     excel_filename_entry = tk.Entry()
 
     file_name_label.pack()
     excel_filename_entry.pack()
 
 
-    job_position_label = tk.Label(font=("Roboto", 10, "bold"), text="Ievadiet vēlamo darba profesiju vai amatu:")
+    job_position_label = tk.Label(font=("Roboto", 10, "bold"), text="Ievadiet darba profesiju vai amatu:")
     job_position_entry = tk.Entry()
 
     job_position_label.pack()
     job_position_entry.pack()
 
-    job_location_label = tk.Label(font=("Roboto", 10, "bold"), text="Ievadiet vēlamo pilsētu, novadu vai valsti:")
+    job_location_label = tk.Label(font=("Roboto", 10, "bold"), text="Ievadiet pilsētu, novadu vai valsti:")
     job_location_entry = tk.Entry()
 
     job_location_label.pack()
     job_location_entry.pack()
 
-    salary_label = tk.Label(font=("Roboto", 10, "bold"), text="Izvēlēties vēlamo minimālo algu:")
+    salary_label = tk.Label(font=("Roboto", 10, "bold"), text="Norādiet minimālo algu:")
     salary_slider_entry = tk.Scale(root, from_=0, to=10000, orient=tk.HORIZONTAL, resolution=100, length=300)
 
     salary_label.pack()
@@ -82,7 +82,7 @@ filtered_words = ["PREMIUM", "PREMIUM DUAL"]
 # HTML koda elementa atrašanās vieta, no kuras pēc tam tiek meklēta visa informācija par vakancēm
 vacancys = driver.find_elements(By.XPATH, "//*[contains(@class, 'big-item')]")
 
-# programmas darba laika noteikšanas mainīgais
+# programmas darba veikšanas laika mainīgais
 current_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 details_info_list = []
@@ -99,6 +99,9 @@ for vacancy_items in vacancys:
     # atrod vakanču pieejamo informācijas tagu 
     details_location = vacancy_items.find_elements(By.TAG_NAME, "li")
 
+    # atrod vakanču klasi, kas satur vakances saiti un iegūst tā vērtību
+    vacancy_link = vacancy_items.find_element(By.CLASS_NAME, "image").get_attribute("href")
+
     vacancy_info = []
 
     # pievieno vakances amatu
@@ -107,6 +110,9 @@ for vacancy_items in vacancys:
     # pievieno vakances pieejamo informāciju
     for vacancy_details in details_location:
             vacancy_info.append(vacancy_details.text)
+
+    # pievieno vakances saiti
+    vacancy_info.append(vacancy_link)
 
     # pievieno sarakstam programmas darba veikšanas laiku
     vacancy_info.append(current_timestamp)
